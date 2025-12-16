@@ -19,6 +19,10 @@ function create (elem='') {
     const div = document.createElement('div');
     div.textContent = elem;
     div.draggable= true;
-    div.classList = 'grid-tile'
+    if (elem='') {
+        div.classList ='grid-tile empty';
+    } else {
+        div.classList = 'grid-tile'
+    }
     return div
 }
